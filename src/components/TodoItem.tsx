@@ -2,10 +2,11 @@ import React from "react";
 
 interface TodoItemPros {
   todoText: string;
+  onRemoveTodo: () => void;
 }
 
-const TodoItem = ({ todoText }: TodoItemPros) => {
-  return <li>{todoText}</li>;
+const TodoItem = ({ todoText, onRemoveTodo }: TodoItemPros) => {
+  return <li onClick={onRemoveTodo}>{todoText}</li>;
 };
 
 export default TodoItem;
